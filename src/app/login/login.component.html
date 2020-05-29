@@ -1,0 +1,55 @@
+﻿<div class="h-100 flex-1-0 laranja-itau-gradiente">
+    <div class=" full-page-intro">
+        <div class="mask rgba-black-light d-flex justify-content-center align-items-center"> 
+
+            <div class="container py-5">
+
+                <div class="row py-auto">
+                    <div class="col-6 justify-content-center my-auto">
+                    <h1>
+                        Portal Itau Transacional
+                    </h1>
+
+                    </div>
+                    <div class="col-6 justify-content-center my-auto">
+                        <div class="alert alert-info">
+                            <strong>Normal User</strong> - U: user P: user<br />
+                            <strong>Administrator</strong> - U: admin P: admin
+                        </div>
+
+                        <div class="card">
+                            <h4 class="card-header text-center">Login</h4>
+                            <div class="card-body">
+                                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form">
+                                    <section class="form-gradient">
+                                        <div class="md-form">
+                                            <input  type="text" formControlName="racf" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.racf.errors }" />
+                                            <label for="racf">RACF</label>
+                                            <div *ngIf="submitted && f.racf.errors" class="invalid-feedback">
+                                                <div *ngIf="f.racf.errors.required">Racf is required</div>
+                                            </div>
+                                        </div>
+                                        <div class="md-form">
+                                            <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                                            <label for="password">Senha</label>
+                                            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                                <div *ngIf="f.password.errors.required">Password is required</div>
+                                            </div>
+                                        </div>
+                                        <button [disabled]="loading" class="btn btn-primary">
+                                            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                                            Login
+                                        </button>
+                                        <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
+                                    </section>
+                                </form>
+                            </div>
+                        </div>
+                    </div>            
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
