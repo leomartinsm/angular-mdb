@@ -6,7 +6,7 @@ import { delay, mergeMap, materialize, dematerialize } from 'rxjs/operators';
 import { User, Role } from '@app/_models';
 
 const users: User[] = [
-    { id: 1, racf: 'admin', password: 'admin', nome: 'Admin', funcional: 'User', role: Role.Admin },
+    { id: 1, racf: 'medeleo', password: '', nome: 'Admin', funcional: '987308566', role: Role.Admin },
     { id: 2, racf: 'user', password: 'user', nome: 'Normal', funcional: 'User', role: Role.User }
 ];
 
