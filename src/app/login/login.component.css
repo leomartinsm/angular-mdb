@@ -1,0 +1,32 @@
+.css-selector {
+    background: linear-gradient(313deg, #fa9d25, #f64a00);
+    background-size: 400% 400%;
+    -webkit-animation: laranja-itau-gradiente 30s ease infinite;
+    -moz-animation: laranja-itau-gradiente 30s ease infinite;
+    -o-animation: laranja-itau-gradiente 30s ease infinite;
+    animation: laranja-itau-gradiente 30s ease infinite;
+}
+@-webkit-keyframes laranja-itau-gradiente {
+    0%{background-position:2% 0%}
+    50%{background-position:99% 100%}
+    100%{background-position:2% 0%}
+}
+@-moz-keyframes laranja-itau-gradiente {
+    0%{background-position:2% 0%}
+    50%{background-position:99% 100%}
+    100%{background-position:2% 0%}
+}
+@-o-keyframes laranja-itau-gradiente {
+    0%{background-position:2% 0%}
+    50%{background-position:99% 100%}
+    100%{background-position:2% 0%}
+}
+@keyframes laranja-itau-gradiente {
+    0%{background-position:2% 0%}
+    50%{background-position:99% 100%}
+    100%{background-position:2% 0%}
+}
+
+.laranja-itau-gradiente{
+    background: linear-gradient(313deg, #fa9d25, #f64a00) !important;
+}

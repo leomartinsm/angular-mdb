@@ -5,8 +5,13 @@ import { first } from 'rxjs/operators';
 
 
 import { AuthenticationService } from '@app/_services';
+import { isNumber } from 'util';
 
-@Component({ templateUrl: 'login.component.html' })
+@Component({ 
+    templateUrl: 'login.component.html',  
+    styleUrls: ['./login.component.css']
+
+})
 export class LoginComponent implements OnInit {
     loginForm: FormGroup;
     loading = false;
@@ -39,6 +44,15 @@ export class LoginComponent implements OnInit {
     // convenience getter for easy access to form fields
     get f() { return this.loginForm.controls; }
 
+    onChange() {
+        if ( isNumber(this.f.racf) ){
+            console.log('funcionou')
+        }
+        else{
+            console.log('nao entrou aqui')
+        }
+
+    }
     onSubmit() {
         this.submitted = true;
 

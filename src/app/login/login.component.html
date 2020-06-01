@@ -1,4 +1,5 @@
-﻿<div class="h-100 w-100 flex-1-0 laranja-itau-gradiente" style="height: 100vh;">
+﻿<div class="h-100 w-100 flex-1-0 laranja-itau-gradiente css-selector" style="height: 100vh;     background-color: linear-gradient(313deg, #fa9d25, #f64a00) !important;
+">
     <div class=" full-page-intro" style="height: 100vh">
         <div class="mask rgba-black-light d-flex justify-content-center align-items-center" style="height: 100vh;"> 
 
@@ -6,26 +7,22 @@
 
                 <div class="row py-auto">
                     <div class="col-6 justify-content-center my-auto">
-                    <h1>
+                    <h1 class="text-light">
                         Portal Itau Transacional
                     </h1>
 
                     </div>
                     <div class="col-6 justify-content-center my-auto">
-                        <div class="alert alert-info">
-                            <strong>Normal User</strong> - U: user P: user<br />
-                            <strong>Administrator</strong> - U: admin P: admin
-                        </div>
 
-                        <div class="card">
+                        <div class="card" style="background: rgba(255, 255, 255, 0.8);;">
                             <h4 class="card-header text-center">Login</h4>
                             <div class="card-body">
                                 <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form">
                                     <section class="form-gradient">
                                         <div class="md-form">
-                                            <input  type="text" formControlName="racf" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.racf.errors }" />
+                                            <input  type="text" formControlName="racf" (ngOnChanges)="onChange()" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.racf.errors }" />
                                             <label for="racf">RACF</label>
-                                            <div *ngIf="submitted && f.racf.errors" class="invalid-feedback">
+                                            <div *ngIf="submitted && f.racf.errors" class="invalid-feedback" >
                                                 <div *ngIf="f.racf.errors.required">Racf is required</div>
                                             </div>
                                         </div>
